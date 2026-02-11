@@ -1,1 +1,1 @@
-# ps-go-fiber
+# PurpleSchool Go Fiber course homework
