@@ -14,5 +14,10 @@ func NewHandler(router fiber.Router) {
 }
 
 func (h *HomeHandler) home(c fiber.Ctx) error {
-	return c.SendString("Hello")
+	data := struct {
+		MenuItems []string
+	}{
+		MenuItems: []string{"#Еда", "#Животные", "#Машины", "#Спорт", "#Музыка", "#Технологии", "#Прочее"},
+	}
+	return c.Render("page", data)
 }
